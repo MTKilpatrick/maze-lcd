@@ -125,6 +125,7 @@ function createMaze() {
         moveToNextCell()
         updateWalls(xpos, ypos)
         nokialcd.show()
+        basic.pause(100)
         cellCount += - 1
     }
     makeOpenings()
@@ -341,17 +342,6 @@ maxX = mazeWidth * scale
 maxY = mazeHeight * scale
 let maze: Buffer = pins.createBuffer(mazeWidth * mazeHeight)
 maze.fill(15)
-nokialcd.clear()
-let runningtime = input.runningTimeMicros()
-for (let q = 0; q < 1000; q++) {
-    nokialcd.pixel(21, 21, true)
-    nokialcd.pixel(22, 21, true)
-    nokialcd.pixel(23, 21, true)
-    nokialcd.pixel(24, 21, true)
-}
-basic.showNumber(input.runningTimeMicros() - runningtime)
-nokialcd.show()
-basic.pause(2000)
 basic.forever(function () {
     createMaze()
     drawMaze()
