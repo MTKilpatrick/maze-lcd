@@ -4,7 +4,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "nokialcd": "github:mtkilpatrick/pxt-nokialcd-asm#master"
+        "nokialcd": "github:mtkilpatrick/pxt-nokialcd#master"
     },
     "files": [
         "main.blocks",
